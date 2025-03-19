@@ -38,14 +38,12 @@ public class MainActivity extends Activity {
     public void onCreateContextMenu(ContextMenu menu, View v,
                                     ContextMenuInfo menuInfo) {
         // додаємо пункти
-        switch (v.getId()) {
-            case R.id.tv:
+        if (v.getId() == R.id.tv) {
                 menu.add(0, MENU_ALPHA_ID, 0, "alpha");
                 menu.add(0, MENU_SCALE_ID, 0, "scale");
                 menu.add(0, MENU_TRANSLATE_ID, 0, "translate");
                 menu.add(0, MENU_ROTATE_ID, 0, "rotate");
                 menu.add(0, MENU_COMBO_ID, 0, "combo");
-                break;
         }
         super.onCreateContextMenu(menu, v, menuInfo);
     }
